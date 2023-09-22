@@ -1,0 +1,103 @@
+#include "math_functions.h"
+
+/* FUNZIONI ALGEBRICHE */
+
+int Fattoriale(const int x) {
+	int result = 1;
+	for (int i = x; i > 1; i--) {
+		result = result * i;
+	}
+	if (x < 0) {
+		MATH_ERROR("Fattoriale: x < 0.\n");
+	}
+
+	return result;
+}
+
+double CoefficienteBinomiale(const int n, const int k) {
+	if (k > n) {
+		MATH_ERROR("CoefficienteBinomiale: n > k.\n");
+	}
+	const int x = Fattoriale(n);
+	const int y = Fattoriale(k);
+	const int differenza = n - k;
+	const int c = Fattoriale(differenza);
+
+	return (double)x / ((double)y * (double)c);
+}
+
+double BinomialeSimmetrico(const int n, const int h, const int k) {
+	double x = (double)Fattoriale(n);
+	double y = (double)Fattoriale(h);
+	double z = (double)Fattoriale(k);
+
+	return x / (y * z);
+}
+
+double ProdottoScalareV(const double* v1, const double* v2, const size_t v1_size, const size_t v2_size) {
+	if (v1 == NULL || v2 == NULL || v1_size == 0 || v2_size == 0) {
+		INVALID_NULL_POINTER("ProdottoScalareV: v is a NULL pointer or v_size <= 0.\n");
+	}
+	else if (v1_size != v2_size) {
+		MATH_ERROR("ProdottoScalareV: v1 and v2 have different sizes.\n");
+	}
+	double result = 0;
+	for (size_t i = 0; i < v1_size; i++) {
+		result += v1[i] * v2[i];
+	}
+
+	return result;
+}
+
+void ProdottoScalareS(double* v, const double k, const size_t v_size) {
+	if (v == NULL || v_size == 0) {
+		INVALID_NULL_POINTER("ProdottoScalareS: v is a NULL pointer or v_size <= 0.\n");
+	}
+	for (size_t i = 0; i < v_size; i++) {
+		v[i] *= k;
+	}
+}
+
+/* CALCOLO DI AREE */
+
+double AreaTriangolo(const double base, const double altezza) {
+	return (base * altezza) / (double)2;
+}
+
+double AreaQuadrato(const double lato) {
+	return pow(lato, 2);
+}
+
+double AreaParallelogramma(const double base, const double altezza) {
+	return base * altezza;
+}
+
+double AreaRombo(const double d1, const  double d2) {
+	return (d1 * d2) / (double)2;
+}
+
+double AreaTrapezio(const double b1, const double b2, const double altezza) {
+	return ((b1 + b2) * altezza) / (double)2;
+}
+
+double AreaCfr(const double raggio) {
+	return 3.14 * pow(raggio, 2);
+}
+
+double AreaCoronaCir(const double rex, const double rin) {
+	return ((pow(rex, 2) - pow(rin, 2)) * 3.14) / (double)2;
+}
+
+/* CALCOLO DI VOLUMI */
+
+double VolumeRettangolo(const double l, const double p, const double h) {
+	return AreaParallelogramma(l, p) * h;
+}
+
+double VolumeCubo(const double l) {
+	return pow(l, 3);
+}
+
+double VolumePiramide(const double base, const double altezza, const double h) {
+	return (AreaTriangolo(base, altezza) * h) / 3;
+}
