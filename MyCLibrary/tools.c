@@ -5,6 +5,9 @@ bool IsEmpty(const void* e) {
 }
 
 void Swap(ElemType* a, ElemType* b) {
+	if (IsEmpty(a) || IsEmpty(b)) {
+		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
+	}
 	ElemType tmp = *a;
 	*a = *b;
 	*b = tmp;
@@ -23,7 +26,7 @@ size_t Compare(const ElemType* a, const ElemType* b) {
 }
 
 bool ElemFind(const ElemType* v, const ElemType* e, const size_t v_size, size_t* index_found) {
-	if (v == NULL || e == NULL || v_size == 0) {
+	if (IsEmpty(v) || IsEmpty(e) || v_size == 0) {
 		INVALID_NULL_POINTER("ElemFind: recieved NULL pointer or invalid v_size.\n");
 	}
 	for (size_t i = 0; i < v_size; i++) {
@@ -37,7 +40,7 @@ bool ElemFind(const ElemType* v, const ElemType* e, const size_t v_size, size_t*
 }
 
 Indexes RangeFind(const ElemType* v, const ElemType* start, const ElemType* end, const size_t v_size, ElemType* sub_v) {
-	if (v == NULL || start == NULL || end == NULL || v_size == 0) {
+	if (IsEmpty(v) || IsEmpty(start) || IsEmpty(end) || v_size == 0) {
 		INVALID_NULL_POINTER("RangeFind: recieved NULL pointer or invalid v_size.\n");
 	}
 	Indexes indexes_found = { -1,-1 };

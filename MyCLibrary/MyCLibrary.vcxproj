@@ -130,12 +130,14 @@
     <ClInclude Include="macro.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="math_functions.h" />
+    <ClInclude Include="graphics.h" />
     <ClInclude Include="string_functions.h" />
     <ClInclude Include="tools.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="math_functions.c" />
+    <ClCompile Include="graphics.c" />
     <ClCompile Include="string_functions.c" />
     <ClCompile Include="tools.c" />
   </ItemGroup>

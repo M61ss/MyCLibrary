@@ -15,4 +15,7 @@ extern void WhitespaceRemove(char* s);
 // ordina un vettore di stringhe in ordine alfabetico
 extern void AlphabeticSort(char** s, const size_t s_size);
 
+// trasforma un int in una stringa preallocata
+extern char* IntToString(int n);
+
 #endif /* STRING_FUNCTIONS_H */

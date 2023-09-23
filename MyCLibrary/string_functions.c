@@ -1,12 +1,15 @@
 #include "string_functions.h"
 
-// inizio strumenti, essi non fanno parte della libreria, servono solo come supporto per le funzioni sottostanti
+// strumenti NON PARTE DELLA LIBRERIA
 
-bool CharIsEmpty(const char* c) {
+bool StringIsEmpty(const char* c) {
 	return c == NULL;
 }
 
 void CharSwap(char* a, char* b) {
+	if (StringIsEmpty(a) || StringIsEmpty(b)) {
+		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
+	}
 	char tmp = *a;
 	*a = *b;
 	*b = tmp;
@@ -17,6 +20,9 @@ bool DoubleCharPointerIsEmpty(const char** c) {
 }
 
 void DoubleCharPointerSwap(char** a, char** b) {
+	if (DoubleCharPointerIsEmpty(a) || DoubleCharPointerIsEmpty(b)) {
+		INVALID_NULL_POINTER("DoublePointerSwap: NULL pointer passed as parameter.\n");
+	}
 	char tmp = **a;
 	**a = **b;
 	**b = tmp;
@@ -77,4 +83,24 @@ void AlphabeticSort(char** s, const size_t s_size) {
 			}
 		}
 	}
+}
+
+char* IntToString(int n) {
+	if (n < 0) {
+		printf("IntToString: negative values are not accepted.\n");
+		exit(-1);
+	}
+	size_t lenght = 0;
+	char* s = malloc(1);
+	for (size_t i = 0; n > 0; i++) {
+		int cifra = n % 10;
+		n /= 10;
+		lenght++;
+		s = realloc(s, lenght + 1);
+		s[i] = cifra + '0';
+		s[i + 1] = 0;
+	}
+	_strrev(s);
+
+	return s;
 }
