@@ -1,16 +1,11 @@
 #if !defined TOOLS_H
 #define TOOLS_H
 
-#include "macro.h"
+#include "common.h"
 
-// per il corretto utilizzo di questa libreria MODIFICARE IL TIPO RAPPRESENTATO DA ELEMTYPE
+// per il corretto utilizzo di questa libreria e delle dipendenti MODIFICARE IL TIPO RAPPRESENTATO DA ELEMTYPE
 // per adattare automaticamente le funzioni al tipo che si desidera utilizzare
 typedef int ElemType;
-
-
-
-// verifica se un puntatore è NULL
-extern bool IsEmpty(const void* e);
 
 // scambio di elementi
 extern void Swap(ElemType* a, ElemType* b);

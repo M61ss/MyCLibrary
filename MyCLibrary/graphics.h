@@ -1,7 +1,7 @@
 #if !defined GRAPHICS_H
 #define GRAPHICS_H
 
-#include "macro.h"
+#include "common.h"
 
 // stampa una linea
 extern void Line(size_t lenght);

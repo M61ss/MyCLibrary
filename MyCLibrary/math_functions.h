@@ -1,7 +1,7 @@
 #if !defined MATH_FUNCTIONS_H
 #define MATH_FUNCTIONS_H
 
-#include "macro.h"
+#include "common.h"
 #include <math.h>
 
 // calcola il fattoriale dell'intero x

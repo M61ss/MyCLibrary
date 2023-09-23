@@ -1,35 +1,5 @@
 #include "string_functions.h"
 
-// strumenti NON PARTE DELLA LIBRERIA
-
-bool StringIsEmpty(const char* c) {
-	return c == NULL;
-}
-
-void CharSwap(char* a, char* b) {
-	if (StringIsEmpty(a) || StringIsEmpty(b)) {
-		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
-	}
-	char tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
-bool DoubleCharPointerIsEmpty(const char** c) {
-	return c == NULL;
-}
-
-void DoubleCharPointerSwap(char** a, char** b) {
-	if (DoubleCharPointerIsEmpty(a) || DoubleCharPointerIsEmpty(b)) {
-		INVALID_NULL_POINTER("DoublePointerSwap: NULL pointer passed as parameter.\n");
-	}
-	char tmp = **a;
-	**a = **b;
-	**b = tmp;
-}
-
-// fine strumenti
-
 char* UserInput(const int input_dim) {
 	char* input = calloc(input_dim + 1, 1);
 	if (fgets(input, input_dim, stdin) == NULL) {
@@ -70,16 +40,13 @@ void WhitespaceRemove(char* s) {
 }
 
 void AlphabeticSort(char** s, const size_t s_size) {
-	if (DoubleCharPointerIsEmpty(s) || s_size == 0) {
+	if (IsEmpty(s) || s_size == 0) {
 		INVALID_NULL_POINTER("AlphabeticSort: string passed is NULL pointer or size is invalid.\n");
 	}
-	bool is_ordered = false;
-	while (!is_ordered) {
-		is_ordered = true;
-		for (size_t i = 0; i < s_size - 1; i++) {
-			if (strcmp(s[i], s[i + 1]) > 0) {
-				DoubleCharPointerSwap(&s[i], &s[i + 1]);
-				is_ordered = false;
+	for (size_t j = 0; j < s_size; j++) {
+		for (size_t i = j + 1; i < s_size; i++) {
+			if (strcmp(s[j], s[i]) > 0) {
+				StringSwap(&s[j], &s[i]);
 			}
 		}
 	}

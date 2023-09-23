@@ -1,9 +1,5 @@
 #include "tools.h"
 
-bool IsEmpty(const void* e) {
-	return e == NULL;
-}
-
 void Swap(ElemType* a, ElemType* b) {
 	if (IsEmpty(a) || IsEmpty(b)) {
 		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");

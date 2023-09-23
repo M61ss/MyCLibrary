@@ -1,7 +1,7 @@
 #if !defined STRING_FUNCTIONS_H
 #define STRING_FUNCTIONS_H
 
-#include "macro.h"
+#include "common.h"
 
 // raccoglie una stringa di input generica da stdin (ritorna un vettore dinamico)
 extern char* UserInput(const int input_dim);
