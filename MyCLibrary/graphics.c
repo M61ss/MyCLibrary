@@ -30,7 +30,7 @@ void Parallelogram(char* s, bool reverted) {
 	if (IsEmpty(s)) {
 		INVALID_NULL_POINTER("Parallelogram: string passed is a NULL pointer.\n");
 	}
-	if (reverted) {
+	if (!reverted) {
 		Line(strlen(s));
 		printf(" \\ %s \\\n  ", s);
 		Line(strlen(s));
