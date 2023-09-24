@@ -8,6 +8,10 @@ bool DoublePointerIsEmpty(const void** c) {
 	return c == NULL;
 }
 
+bool IsEqual(const int* n) {
+	return (*n % 2) == 0;
+}
+
 void charSwap(char* a, char* b) {
 	if (IsEmpty(a) || IsEmpty(b)) {
 		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");

@@ -8,6 +8,9 @@ extern bool IsEmpty(const void* e);
 // verifica se un double pointer è NULL
 extern bool DoublePointerIsEmpty(const void** c);
 
+// verifica se un numero è pari
+extern bool IsEqual(const int* n);
+
 // funzioni per lo scambio dei diversi tipi di dato
 extern void charSwap(char* a, char* b);
 extern void shortSwap(short* a, short* b);

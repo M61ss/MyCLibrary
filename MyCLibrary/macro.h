@@ -17,4 +17,7 @@
 // errore generato da un NULL pointer
 #define INVALID_NULL_POINTER(message) perror(message); exit(3)
 
+// errore dovuto al passaggio di parametri non validi
+#define INVALID_PARAMETER(message) perror(message); exit(4)
+
 #endif /* MACRO_H */
