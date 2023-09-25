@@ -1,7 +1,7 @@
 #include "common.h"
 
-bool IsEmpty(const void* e) {
-	return e == NULL;
+bool IsEmpty(const void* p) {
+	return p == NULL;
 }
 
 bool DoublePointerIsEmpty(const void** c) {

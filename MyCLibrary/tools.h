@@ -10,9 +10,6 @@ typedef int ElemType;
 // scambio di elementi
 extern void Swap(ElemType* a, ElemType* b);
 
-// confronta elementi: ritorna 1 se a > b, -1 se a < b, 0 se a == b
-extern size_t Compare(const ElemType* a, const ElemType* b);
-
 // cerca un elemento(e) in un vettore(v) di dimensione v_size. Se lo trova salva in index_found l'indice dell'elemento nel vettore
 extern bool ElemFind(const ElemType* v, const ElemType* e, const size_t v_size, size_t* index_found);
 

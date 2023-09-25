@@ -9,18 +9,6 @@ void Swap(ElemType* a, ElemType* b) {
 	*b = tmp;
 }
 
-size_t Compare(const ElemType* a, const ElemType* b) {
-	if (*a > *b) {
-		return 1;
-	}
-	else if (*a < *b) {
-		return -1;
-	}
-	else {
-		return 0;
-	}
-}
-
 bool ElemFind(const ElemType* v, const ElemType* e, const size_t v_size, size_t* index_found) {
 	if (IsEmpty(v) || IsEmpty(e) || v_size == 0) {
 		INVALID_NULL_POINTER("ElemFind: recieved NULL pointer or invalid v_size.\n");

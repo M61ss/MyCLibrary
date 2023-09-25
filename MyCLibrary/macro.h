@@ -8,6 +8,12 @@
 #include <stdbool.h>
 #include <stdio.h>
 
+// confronta due numeri e ritorna il maggiore tra i due
+#define MAX(a, b) (a) > (b) ? (a) : (b)
+
+// confronta due numeri e ritorna il maggiore tra i due
+#define MIN(a, b) (a) < (b) ? (a) : (b)
+
 // errore in funzioni dedicate allo svolgimento di calcoli matematici
 #define MATH_ERROR(message) perror(message); exit(1)
 

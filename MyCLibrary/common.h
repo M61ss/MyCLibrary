@@ -3,7 +3,7 @@
 #include "macro.h"
 
 // verifica se un puntatore è NULL
-extern bool IsEmpty(const void* e);
+extern bool IsEmpty(const void* p);
 
 // verifica se un double pointer è NULL
 extern bool DoublePointerIsEmpty(const void** c);

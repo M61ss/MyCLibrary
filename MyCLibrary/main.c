@@ -6,5 +6,6 @@ int main(void) {
 	setlocale(LC_ALL, "");
 	Piramid("Ehilà", true);
 
+
 	return EXIT_SUCCESS;
 }
