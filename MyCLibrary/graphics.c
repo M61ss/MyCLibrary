@@ -1,6 +1,6 @@
 #include "graphics.h"
 
-void Space(int n) {
+void Space(const int n) {
 	if (n < 0) {
 		INVALID_PARAMETER("Spacer: n has to be >= 0.\n");
 	}
@@ -9,7 +9,7 @@ void Space(int n) {
 	}
 }
 
-void Line(size_t lenght) {
+void Line(const size_t lenght) {
 	printf("+-");
 	for (size_t i = 0; i < lenght; i++) {
 		printf("-");
@@ -17,7 +17,7 @@ void Line(size_t lenght) {
 	printf("-+\n");
 }
 
-void Box(char* s) {
+void Box(const char* s) {
 	if (IsEmpty(s)) {
 		INVALID_NULL_POINTER("Box: string passed is a NULL pointer.\n");
 	}
@@ -26,7 +26,7 @@ void Box(char* s) {
 	Line(strlen(s));
 }
 
-void Parallelogram(char* s, bool reverted) {
+void Parallelogram(const char* s, const bool reverted) {
 	if (IsEmpty(s)) {
 		INVALID_NULL_POINTER("Parallelogram: string passed is a NULL pointer.\n");
 	}
@@ -42,7 +42,7 @@ void Parallelogram(char* s, bool reverted) {
 	}
 }
 
-void Piramid(char* s, bool reverted) {
+void Piramid(const char* s, const bool reverted) {
 	if (IsEmpty(s) || strlen(s) == 0) {
 		INVALID_NULL_POINTER("Piramid: string passed is a NULL pointer or is empty.\n");
 	}

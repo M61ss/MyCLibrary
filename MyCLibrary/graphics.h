@@ -4,18 +4,18 @@
 #include "common.h"
 
 // stampa n spazi
-extern void Space(int n);
+extern void Space(const int n);
 
 // stampa una linea
-extern void Line(size_t lenght);
+extern void Line(const size_t lenght);
 
 // stampa un box contenente una stringa
-extern void Box(char* s);
+extern void Box(const char* s);
 
 // stampa un parallelogramma contenente una stringa
-extern void Parallelogram(char* s, bool reverted);
+extern void Parallelogram(const char* s, const bool reverted);
 
 // stampa una piramide che ha una stringa come base
-extern void Piramid(char* s, bool reverted);
+extern void Piramid(const char* s, const bool reverted);
 
 #endif /* GRAPHICS_H */

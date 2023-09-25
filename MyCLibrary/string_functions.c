@@ -54,7 +54,7 @@ void AlphabeticSort(char** s, const size_t s_size) {
 
 char* IntToString(int n) {
 	if (n < 0) {
-		printf("IntToString: negative values are not accepted.\n");
+		perror("IntToString: negative values are not accepted.\n");
 		exit(-1);
 	}
 	size_t lenght = 0;
