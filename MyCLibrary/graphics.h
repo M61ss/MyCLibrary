@@ -1,4 +1,4 @@
-#if !defined GRAPHICS_H
+#ifndef GRAPHICS_H
 #define GRAPHICS_H
 
 #include "common.h"
@@ -18,4 +18,4 @@ extern void Parallelogram(const char* s, const bool reverted);
 // stampa una piramide che ha una stringa come base
 extern void Piramid(const char* s, const bool reverted);
 
-#endif /* GRAPHICS_H */
+#endif // !GRAPHICS_H

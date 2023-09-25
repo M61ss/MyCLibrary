@@ -18,6 +18,10 @@ void Line(const size_t lenght) {
 }
 
 void Box(const char* s) {
+#ifdef UTF8_ENCODE
+#include <locale.h>
+	setlocale(LC_ALL, "");
+#endif // UTF8_ENCODE
 	if (IsEmpty(s)) {
 		INVALID_NULL_POINTER("%s (Box): line %d: string passed is a NULL pointer.\n", __FILE__, __LINE__);
 	}
@@ -27,6 +31,10 @@ void Box(const char* s) {
 }
 
 void Parallelogram(const char* s, const bool reverted) {
+#ifdef UTF8_ENCODE
+#include <locale.h>
+	setlocale(LC_ALL, "");
+#endif // UTF8_ENCODE
 	if (IsEmpty(s)) {
 		INVALID_NULL_POINTER("%s (Parallelogram): line %d: string passed is a NULL pointer.\n", __FILE__, __LINE__);
 	}
@@ -43,6 +51,10 @@ void Parallelogram(const char* s, const bool reverted) {
 }
 
 void Piramid(const char* s, const bool reverted) {
+#ifdef UTF8_ENCODE
+#include <locale.h>
+	setlocale(LC_ALL, "");
+#endif // UTF8_ENCODE
 	if (IsEmpty(s) || strlen(s) == 0) {
 		INVALID_NULL_POINTER("%s (Piramid): line %d: string passed is a NULL pointer or is empty.\n", __FILE__, __LINE__);
 	}

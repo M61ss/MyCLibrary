@@ -1,4 +1,4 @@
-#if !defined TOOLS_H
+#ifndef TOOLS_H
 #define TOOLS_H
 
 #include "common.h"
@@ -8,7 +8,7 @@
 typedef int ElemType;
 
 // scambio di elementi
-extern void Swap(ElemType* a, ElemType* b);
+extern void ElemSwap(ElemType* a, ElemType* b);
 
 // cerca un elemento(e) in un vettore(v) di dimensione v_size. Se lo trova salva in index_found l'indice dell'elemento nel vettore
 extern bool ElemFind(const ElemType* v, const ElemType* e, const size_t v_size, size_t* index_found);
@@ -38,4 +38,4 @@ extern void Sort(ElemType* v, const size_t v_size, const bool crescent_order);
 // divide un vettore in due sottovettori di dimensione arbitraria
 extern void Split(ElemType* v, ElemType* first_part, ElemType* second_part, const size_t first_element_second_part, const size_t v_size);
 
-#endif /* TOOLS_H */
+#endif // !TOOLS_H

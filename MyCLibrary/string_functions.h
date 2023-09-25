@@ -1,4 +1,4 @@
-#if !defined STRING_FUNCTIONS_H
+#ifndef STRING_FUNCTIONS_H
 #define STRING_FUNCTIONS_H
 
 #include "common.h"
@@ -18,4 +18,4 @@ extern void AlphabeticSort(char** s, const size_t s_size);
 // trasforma un int in una stringa (ritorna un vettore dinamico)
 extern char* IntToString(int n);
 
-#endif /* STRING_FUNCTIONS_H */
+#endif // !STRING_FUNCTIONS_H

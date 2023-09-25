@@ -1,4 +1,5 @@
-#pragma once
+#ifndef COMMON_H
+#define COMMON_H
 
 #include "macro.h"
 
@@ -31,3 +32,5 @@ extern void llongSwap(long long* a, long long* b);
 
 // swap di due stringhe FUNZIONA SOLO SE ALLOCATE DINAMICAMENTE
 extern void StringSwap(char** s1, char** s2);
+
+#endif // !COMMON_H

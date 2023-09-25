@@ -1,8 +1,13 @@
-#if !defined MATH_FUNCTIONS_H
+#ifndef MATH_FUNCTIONS_H
 #define MATH_FUNCTIONS_H
 
-#define PI 3.14159265
-#define E 2.71828182
+#ifndef PI
+#define PI 3.14159265		/* greek pi */
+#endif // !PI
+
+#ifndef E
+#define E 2.71828182		/* Euler's number */
+#endif // !E
 
 #include "common.h"
 #include <math.h>
@@ -52,4 +57,4 @@ extern double VolumeCubo(const double l);
 // calcola il volume della piramide date base e altezza del triangolo alla base della piramide e l'altezza della stessa(h) 
 extern double VolumePiramide(const double base, const double altezza, const double h);
 
-#endif /* MATH_FUNCTIONS_H */
+#endif // !MATH_FUNCTIONS_H
