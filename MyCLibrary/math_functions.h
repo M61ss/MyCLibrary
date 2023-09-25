@@ -1,6 +1,9 @@
 #if !defined MATH_FUNCTIONS_H
 #define MATH_FUNCTIONS_H
 
+#define pi 3.14159265
+#define e 2.71828182
+
 #include "common.h"
 #include <math.h>
 
