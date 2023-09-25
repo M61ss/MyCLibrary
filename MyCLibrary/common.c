@@ -14,7 +14,7 @@ bool IsEqual(const int* n) {
 
 void charSwap(char* a, char* b) {
 	if (IsEmpty(a) || IsEmpty(b)) {
-		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
+		INVALID_NULL_POINTER("%s (Swap): line %d: NULL pointer passed as parameter.\n", __FILE__, __LINE__);
 	}
 	char tmp = *a;
 	*a = *b;
@@ -22,7 +22,7 @@ void charSwap(char* a, char* b) {
 }
 void shortSwap(short* a, short* b) {
 	if (IsEmpty(a) || IsEmpty(b)) {
-		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
+		INVALID_NULL_POINTER("%s (Swap): line %d: NULL pointer passed as parameter.\n", __FILE__, __LINE__);
 	}
 	short tmp = *a;
 	*a = *b;
@@ -30,7 +30,7 @@ void shortSwap(short* a, short* b) {
 }
 void floatSwap(float* a, float* b) {
 	if (IsEmpty(a) || IsEmpty(b)) {
-		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
+		INVALID_NULL_POINTER("%s (Swap): line %d: NULL pointer passed as parameter.\n", __FILE__, __LINE__);
 	}
 	float tmp = *a;
 	*a = *b;
@@ -38,7 +38,7 @@ void floatSwap(float* a, float* b) {
 }
 void intSwap(int* a, int* b) {
 	if (IsEmpty(a) || IsEmpty(b)) {
-		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
+		INVALID_NULL_POINTER("%s (Swap): line %d: NULL pointer passed as parameter.\n", __FILE__, __LINE__);
 	}
 	int tmp = *a;
 	*a = *b;
@@ -46,7 +46,7 @@ void intSwap(int* a, int* b) {
 }
 void doubleSwap(double* a, double* b) {
 	if (IsEmpty(a) || IsEmpty(b)) {
-		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
+		INVALID_NULL_POINTER("%s (Swap): line %d: NULL pointer passed as parameter.\n", __FILE__, __LINE__);
 	}
 	double tmp = *a;
 	*a = *b;
@@ -54,7 +54,7 @@ void doubleSwap(double* a, double* b) {
 }
 void longSwap(long* a, long* b) {
 	if (IsEmpty(a) || IsEmpty(b)) {
-		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
+		INVALID_NULL_POINTER("%s (Swap): line %d: NULL pointer passed as parameter.\n", __FILE__, __LINE__);
 	}
 	long tmp = *a;
 	*a = *b;
@@ -62,7 +62,7 @@ void longSwap(long* a, long* b) {
 }
 void llongSwap(long long* a, long long* b) {
 	if (IsEmpty(a) || IsEmpty(b)) {
-		INVALID_NULL_POINTER("Swap: NULL pointer passed as parameter.\n");
+		INVALID_NULL_POINTER("%s (Swap): line %d: NULL pointer passed as parameter.\n", __FILE__, __LINE__);
 	}
 	long long tmp = *a;
 	*a = *b;
@@ -71,7 +71,7 @@ void llongSwap(long long* a, long long* b) {
 
 void StringSwap(char** s1, char** s2) {
 	if (DoublePointerIsEmpty(s1) || DoublePointerIsEmpty(s2) || IsEmpty(*s1) || IsEmpty(*s2)) {
-		INVALID_NULL_POINTER("DoublePointerSwap: NULL pointer passed as parameter.\n");
+		INVALID_NULL_POINTER("%s (StringSwap): line %d: NULL pointer passed as parameter.\n", __FILE__, __LINE__);
 	}
 	// tmp
 	char* tmp = malloc(strlen(*s1) + 1);

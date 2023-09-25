@@ -4,7 +4,7 @@ char* UserInput(const int input_dim) {
 	char* input = calloc(input_dim + 1, 1);
 	if (fgets(input, input_dim, stdin) == NULL) {
 		free(input);
-		ERROR_READING_STDIN;
+		ERROR_READING_STDIN(__FILE__, __LINE__);
 	}
 
 	return input;
@@ -14,7 +14,7 @@ bool UserDecision(void) {
 	while (1) {
 		char decision;
 		if (scanf("%c", &decision) != 1) {
-			ERROR_READING_STDIN;
+			ERROR_READING_STDIN(__FILE__, __LINE__);
 		}
 
 		if (decision == 'y' || decision == 'Y') {
@@ -24,7 +24,7 @@ bool UserDecision(void) {
 			return false;
 		}
 		else {
-			perror("UserDecision: invalid input. Accepted answer: 'y' (yes) o 'n' (no).");
+			printf("%s (UserDecision): line %d: invalid input. Accepted answer: 'y' (yes) o 'n' (no).\n", __FILE__, __LINE__);
 		}
 	}
 }
@@ -41,7 +41,7 @@ void WhitespaceRemove(char* s) {
 
 void AlphabeticSort(char** s, const size_t s_size) {
 	if (IsEmpty(s) || s_size == 0) {
-		INVALID_NULL_POINTER("AlphabeticSort: string passed is NULL pointer or size is invalid.\n");
+		INVALID_NULL_POINTER("%s (AlphabeticSort): line %d: string passed is NULL pointer or size is invalid.\n", __FILE__, __LINE__);
 	}
 	for (size_t j = 0; j < s_size; j++) {
 		for (size_t i = j + 1; i < s_size; i++) {
@@ -54,7 +54,7 @@ void AlphabeticSort(char** s, const size_t s_size) {
 
 char* IntToString(int n) {
 	if (n < 0) {
-		perror("IntToString: negative values are not accepted.\n");
+		printf("%s (IntToString): line %d: negative values are not accepted.\n", __FILE__, __LINE__);
 		exit(-1);
 	}
 	size_t lenght = 0;

@@ -2,7 +2,7 @@
 
 void Space(const int n) {
 	if (n < 0) {
-		INVALID_PARAMETER("Spacer: n has to be >= 0.\n");
+		INVALID_PARAMETER("%s (Space): line %d: n has to be >= 0.\n", __FILE__, __LINE__);
 	}
 	for (int i = 0; i < n; i++) {
 		printf(" ");
@@ -19,7 +19,7 @@ void Line(const size_t lenght) {
 
 void Box(const char* s) {
 	if (IsEmpty(s)) {
-		INVALID_NULL_POINTER("Box: string passed is a NULL pointer.\n");
+		INVALID_NULL_POINTER("%s (Box): line %d: string passed is a NULL pointer.\n", __FILE__, __LINE__);
 	}
 	Line(strlen(s));
 	printf("| %s |\n", s);
@@ -28,7 +28,7 @@ void Box(const char* s) {
 
 void Parallelogram(const char* s, const bool reverted) {
 	if (IsEmpty(s)) {
-		INVALID_NULL_POINTER("Parallelogram: string passed is a NULL pointer.\n");
+		INVALID_NULL_POINTER("%s (Parallelogram): line %d: string passed is a NULL pointer.\n", __FILE__, __LINE__);
 	}
 	if (!reverted) {
 		Line(strlen(s));
@@ -44,7 +44,7 @@ void Parallelogram(const char* s, const bool reverted) {
 
 void Piramid(const char* s, const bool reverted) {
 	if (IsEmpty(s) || strlen(s) == 0) {
-		INVALID_NULL_POINTER("Piramid: string passed is a NULL pointer or is empty.\n");
+		INVALID_NULL_POINTER("%s (Piramid): line %d: string passed is a NULL pointer or is empty.\n", __FILE__, __LINE__);
 	}
 	int s_lenght = (int)strlen(s);
 	bool is_equal = IsEqual(&s_lenght);

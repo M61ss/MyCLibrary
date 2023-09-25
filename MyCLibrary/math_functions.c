@@ -8,7 +8,7 @@ int Fattoriale(const int x) {
 		result = result * i;
 	}
 	if (x < 0) {
-		MATH_ERROR("Fattoriale: x < 0.\n");
+		MATH_ERROR("%s (fattoriale): line %d: x < 0.\n", __FILE__, __LINE__);
 	}
 
 	return result;
@@ -16,7 +16,7 @@ int Fattoriale(const int x) {
 
 double CoefficienteBinomiale(const int n, const int k) {
 	if (k > n) {
-		MATH_ERROR("CoefficienteBinomiale: n > k.\n");
+		MATH_ERROR("%s (coefficientebinomiale): line %d: n > k.\n", __FILE__, __LINE__);
 	}
 	const int x = Fattoriale(n);
 	const int y = Fattoriale(k);
@@ -36,10 +36,10 @@ double BinomialeSimmetrico(const int n, const int h, const int k) {
 
 double ProdottoScalareV(const double* v1, const double* v2, const size_t v1_size, const size_t v2_size) {
 	if (v1 == NULL || v2 == NULL || v1_size == 0 || v2_size == 0) {
-		INVALID_NULL_POINTER("ProdottoScalareV: v is a NULL pointer or v_size <= 0.\n");
+		INVALID_NULL_POINTER("%s (prodottoscalarev): line %d: v is a NULL pointer or v_size <= 0.\n", __FILE__, __LINE__);
 	}
 	else if (v1_size != v2_size) {
-		MATH_ERROR("ProdottoScalareV: v1 and v2 have different sizes.\n");
+		MATH_ERROR("%s (prodottoscalarev): line %d: v1 and v2 have different sizes.\n", __FILE__, __LINE__);
 	}
 	double result = 0;
 	for (size_t i = 0; i < v1_size; i++) {
@@ -51,7 +51,7 @@ double ProdottoScalareV(const double* v1, const double* v2, const size_t v1_size
 
 void ProdottoScalareS(double* v, const double k, const size_t v_size) {
 	if (v == NULL || v_size == 0) {
-		INVALID_NULL_POINTER("ProdottoScalareS: v is a NULL pointer or v_size <= 0.\n");
+		INVALID_NULL_POINTER("%s (prodottoscalares): line %d: v is a NULL pointer or v_size <= 0.\n", __FILE__, __LINE__);
 	}
 	for (size_t i = 0; i < v_size; i++) {
 		v[i] *= k;

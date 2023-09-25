@@ -2,6 +2,15 @@
 
 #include "macro.h"
 
+// ritorna il valore assoluto di un numero
+#define ABS(a) (a) < 0 ? -(a) : (a)
+
+// confronta due numeri e ritorna il maggiore tra i due
+#define MAX(a, b) (a) > (b) ? (a) : (b)
+
+// confronta due numeri e ritorna il maggiore tra i due
+#define MIN(a, b) (a) < (b) ? (a) : (b)
+
 // verifica se un puntatore è NULL
 extern bool IsEmpty(const void* p);
 
