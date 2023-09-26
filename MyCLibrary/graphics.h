@@ -10,7 +10,7 @@ coding many command-line graphics, like boxes, lines, piramids, ect.
 #include  <stdio.h>
 
 #ifndef MACRO_H
-#error This library needs the header "macro.h"
+#error graphics.h: need the header "macro.h"
 #endif // !MACRO_H
 
 
@@ -20,17 +20,30 @@ coding many command-line graphics, like boxes, lines, piramids, ect.
 
 
 
+#ifndef UTF_ENCODE
 /** @brief Definition that is needed if you want to use the UTF codification of the system shell */
-#define UTF8_ENCODE
+#define UTF_ENCODE
+#endif // !UTF_ENCODE
 
+#ifndef DASH
 /** @brief Macro used for print a single dash */
 #define DASH printf("-")
+#endif // !DASH
 
+#ifndef SPACE
 /** @brief Macro used for print a single space */
 #define SPACE printf(" ")
+#endif // !SPACE
 
+#ifndef TAB
+/** @brief Macro used for print a single tabulation */
+#define TAB printf("\t")
+#endif // !TAB
+
+#ifndef NEWLINE
 /** @brief Macro used for print a new-line character (\n) */
 #define NEWLINE printf("\n")
+#endif // !NEWLINE
 
 
 
@@ -46,7 +59,7 @@ coding many command-line graphics, like boxes, lines, piramids, ect.
 
 @return void
 */
-extern void Spacer(const size_t n);
+extern void Spacer(const int n);
 
 /** @brief Function `Line()` prints on STDOUT a sequence of dash.
 
@@ -54,7 +67,7 @@ extern void Spacer(const size_t n);
 
 @return void
 */
-extern void Line(const size_t lenght);
+extern void Line(const int lenght);
 
 /** @brief Function `LinePlus()` prints on STDOUT a sequence of dash preceded by `+-` and ended by `-+`.
 
@@ -62,7 +75,16 @@ extern void Line(const size_t lenght);
 
 @return void
 */
-extern void LinePlus(const size_t lenght);
+extern void LinePlus(const int lenght);
+
+/** @brief Function `Arrow()` prints on STDOUT an arrow.
+
+@param[in] lenght = Lenght of the arrow (misured in dash);
+@param[in] direction = If direction > 0 the arrow points to right; if < 0 it points to left; if == 0 it points to both of directions.
+
+@return void
+*/
+extern void Arrow(const int lenght, const int direction);
 
 /** @brief Function `Box()` prints on STDOUT a box containing a string.
 
@@ -71,7 +93,7 @@ extern void LinePlus(const size_t lenght);
 
 @return void
 */
-extern void Box(const char* s, const size_t padding);
+extern void Box(const char* s, const int padding);
 
 /** @brief Function `Parallelogram()` prints on STDOUT a parallelogram containing a string.
 
@@ -81,7 +103,7 @@ extern void Box(const char* s, const size_t padding);
 
 @return void
 */
-extern void Parallelogram(const char* s, const size_t padding, const bool reverted);
+extern void Parallelogram(const char* s, const int padding, const bool reverted);
 
 /** @brief Function `Piramid()` prints on STDOUT a triangle containing a string.
 
@@ -91,6 +113,6 @@ extern void Parallelogram(const char* s, const size_t padding, const bool revert
 
 @return void
 */
-extern void Piramid(const char* s, const size_t padding, const bool reverted);
+extern void Piramid(const char* s, const int padding, const bool reverted);
 
 #endif // !GRAPHICS_H

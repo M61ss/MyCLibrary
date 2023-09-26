@@ -3,6 +3,11 @@
 
 #include "common.h"
 
+// stampa una stringa seguita da un newline
+#ifndef WRITELN
+#define WRITELN(s) printf("%s\n", s)
+#endif // !WRITELN
+
 // raccoglie una stringa di input generica da stdin (ritorna un vettore dinamico)
 extern char* UserInput(const int input_dim);
 
