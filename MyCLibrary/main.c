@@ -2,15 +2,15 @@
 
 int main(void) {
 	Box("Ehilà!", 0);
-	printf("\n");
+	NEWLINE;
 	LinePlus(strlen("ssssssssssss"));
-	printf("\n");
+	NEWLINE;
 	Piramid("Error", 0, false);
-	printf("\n");
+	NEWLINE;
 	Parallelogram("ssssssss", 3, true);
-	printf("\n");
+	NEWLINE;
 	Piramid("A testa in giù", 5, true);
-	printf("\n");
+	NEWLINE;
 	Box("I'm the fastest reader in the world", 4);
 
 	return EXIT_SUCCESS;
