@@ -134,6 +134,7 @@
     <ClInclude Include="graphics.h" />
     <ClInclude Include="string_functions.h" />
     <ClInclude Include="tools.h" />
+    <ClInclude Include="type.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="common.c" />

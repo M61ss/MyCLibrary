@@ -13,15 +13,28 @@
 /********************************************************************************/
 
 
-
-// ritorna il valore assoluto di un numero
+#ifndef ABS
+/** @brief Macro return absolute value of a number */
 #define ABS(a) (a) < 0 ? -(a) : (a)
+#endif // !ABS
 
-// confronta due numeri e ritorna il maggiore tra i due
+#ifndef MAX
+/** @brief Macro return the maximum value between the two passed */
 #define MAX(a, b) (a) > (b) ? (a) : (b)
+#endif // !MAX
 
-// confronta due numeri e ritorna il maggiore tra i due
+#ifndef MIN
+/** @brief Macro return the minimum value between the two passed */
 #define MIN(a, b) (a) < (b) ? (a) : (b)
+#endif // !MIN
+
+
+
+/********************************************************************************/
+/*									FUNCTIONS									*/
+/********************************************************************************/
+
+
 
 /** @brief Function `IsEmpty()` verify if a pointer is NULL.
 

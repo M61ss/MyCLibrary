@@ -5,3 +5,4 @@
 #include "string_functions.h"
 #include "math_functions.h"
 #include "graphics.h"
+#include "common.h"

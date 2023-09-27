@@ -2,15 +2,22 @@
 #define MATH_FUNCTIONS_H
 
 #ifndef PI
-#define PI 3.14159265		/* greek pi */
+/** @brief Macro represents the greek pi */
+#define PI 3.14159265
 #endif // !PI
 
 #ifndef E
-#define E 2.71828182		/* Euler's number */
+/** @brief Macro represents the Euler's number */
+#define E 2.71828182
 #endif // !E
 
-#include "common.h"
+#include "macro.h"
 #include <math.h>
+
+#ifndef MACRO_H
+#error math_functions.h: need the header "macro.h"
+#endif // !MACRO_H
+
 
 // calcola il fattoriale dell'intero x
 extern int Fattoriale(const int x);
