@@ -3,6 +3,17 @@
 
 #include "macro.h"
 
+#ifndef MACRO_H
+#error common.h: need the header "macro.h"
+#endif // !MACRO_H
+
+
+/********************************************************************************/
+/*									DEFINE										*/
+/********************************************************************************/
+
+
+
 // ritorna il valore assoluto di un numero
 #define ABS(a) (a) < 0 ? -(a) : (a)
 
