@@ -2,7 +2,7 @@
 
 int main(void) {
 	Box("Ehilà!", 0); NEWLINE;
-	LinePlus(strlen("ssssssssssss")); NEWLINE;
+	LinePlus((int)strlen("ssssssssssss")); NEWLINE;
 	Piramid("Error", 0, false); NEWLINE;
 	Parallelogram("ssssssss", 3, true); NEWLINE;
 	Piramid("A testa in giù", 5, true); NEWLINE;
