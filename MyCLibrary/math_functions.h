@@ -82,34 +82,75 @@ extern double ScalarProductV(const double* v1, const double* v2, const size_t v1
 */
 extern void ScalarProductS(double* v, const double k, const size_t v_size);
 
-// calcola l'area del triangolo date base e altezza
-extern double AreaTriangolo(const double base, const double altezza);
+/** @brief Function `TriangleArea()` calculates the area of a triangle.
 
-// calcola l'area del quadrato dato il lato
-extern double AreaQuadrato(const double lato);
+@param[in] base = base;
+@param[in] h = height.
 
-// calcola l'area del parallelogramma date base e altezza
-extern double AreaParallelogramma(const double base, const double altezza);
+@return double = triangle's area.
+*/
+extern double TriangleArea(const double base, const double h);
 
-// calcola l'area del rombo date le due diagonali
-extern double AreaRombo(const double d1, const double d2);
+/** @brief Function `SquareArea()` calculates the area of a square.
 
-// calcola l'area del trapezio date base minore (b1), base maggiore (b2) e altezza
-extern double AreaTrapezio(const double b1, const double b2, const double altezza);
+@param[in] side = side.
 
-// calcola l'area della circonferenza dato il raggio
-extern double AreaCfr(const double raggio);
+@return double = square's area.
+*/
+extern double SquareArea(const double side);
 
-// calcola l'area della corona circolare dato il raggio della circonferenza esterna e il raggio di quella interna
-extern double AreaCoronaCir(const double rex, const double rin);
+/** @brief Function `ParallelogramArea()` calculates the area of a parallelogram.
+
+@param[in] base = base;
+@param[in] h = height.
+
+@return double = parallelogram's area.
+*/
+extern double ParallelogramArea(const double base, const double h);
+
+/** @brief Function `RhombusArea()` calculates the area of a rhombus.
+
+@param[in] d1 = larger diagional;
+@param[in] d2 = smaller diagonal.
+
+@return double = rhombus's area.
+*/
+extern double RhombusArea(const double d1, const double d2);
+
+/** @brief Function `TrapezeArea()` calculates the area of a trapeze.
+
+@param[in] b1 = larger base;
+@param[in] b2 = smaller base;
+@param[in] h = height.
+
+@return double = trapeze's area.
+*/
+extern double TrapezeArea(const double b1, const double b2, const double h);
+
+/** @brief Function `CircleArea()` calculates the area of a circle.
+
+@param[in] r = radius.
+
+@return double = circle's area.
+*/
+extern double CircleArea(const double r);
+
+/** @brief Function `CircleArea()` calculates the area of a circle.
+
+@param[in] rex = external circle's radius;
+@param[in] rin = internal circle's radius;
+
+@return double = area of circular crown.
+*/
+extern double CircularCrownArea(const double rex, const double rin);
 
 // calcola il volume di un solido rettangolare dati lato, profondità e altezza
-extern double VolumeRettangolo(const double l, const double p, const double h);
+extern double RectangleVolume(const double l, const double p, const double h);
 
 // calcola il volume di un cubo dato il lato
-extern double VolumeCubo(const double l);
+extern double CubeVolume(const double l);
 
 // calcola il volume della piramide date base e altezza del triangolo alla base della piramide e l'altezza della stessa(h) 
-extern double VolumePiramide(const double base, const double altezza, const double h);
+extern double PiramidVolum(const double base, const double hb, const double h);
 
 #endif // !MATH_FUNCTIONS_H

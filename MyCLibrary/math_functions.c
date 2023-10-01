@@ -60,44 +60,44 @@ void ScalarProductS(double* v, const double k, const size_t v_size) {
 
 /* CALCOLO DI AREE */
 
-double AreaTriangolo(const double base, const double altezza) {
-	return (base * altezza) / (double)2;
+double TriangleArea(const double base, const double h) {
+	return (base * h) / (double)2;
 }
 
-double AreaQuadrato(const double lato) {
-	return pow(lato, 2);
+double SquareArea(const double side) {
+	return pow(side, 2);
 }
 
-double AreaParallelogramma(const double base, const double altezza) {
-	return base * altezza;
+double ParallelogramArea(const double base, const double h) {
+	return base * h;
 }
 
-double AreaRombo(const double d1, const  double d2) {
+double RhombusArea(const double d1, const  double d2) {
 	return (d1 * d2) / (double)2;
 }
 
-double AreaTrapezio(const double b1, const double b2, const double altezza) {
-	return ((b1 + b2) * altezza) / (double)2;
+double TrapezeArea(const double b1, const double b2, const double h) {
+	return ((b1 + b2) * h) / (double)2;
 }
 
-double AreaCfr(const double raggio) {
-	return 3.14 * pow(raggio, 2);
+double CircleArea(const double r) {
+	return 3.14 * pow(r, 2);
 }
 
-double AreaCoronaCir(const double rex, const double rin) {
+double CircularCrownArea(const double rex, const double rin) {
 	return ((pow(rex, 2) - pow(rin, 2)) * 3.14) / (double)2;
 }
 
 /* CALCOLO DI VOLUMI */
 
-double VolumeRettangolo(const double l, const double p, const double h) {
-	return AreaParallelogramma(l, p) * h;
+double RectangleVolume(const double l, const double p, const double h) {
+	return ParallelogramArea(l, p) * h;
 }
 
-double VolumeCubo(const double l) {
+double CubeVolume(const double l) {
 	return pow(l, 3);
 }
 
-double VolumePiramide(const double base, const double altezza, const double h) {
-	return (AreaTriangolo(base, altezza) * h) / 3;
+double PiramidVolum(const double base, const double hb, const double h) {
+	return (TriangleArea(base, hb) * h) / 3;
 }
