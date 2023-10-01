@@ -22,8 +22,8 @@ extern void TypeSwap(TYPE* a, TYPE* b);
 extern bool TypeFind(const TYPE* v, const TYPE* e, const size_t v_size, size_t* index_found);
 
 struct Indexes {
-	size_t start;	// indice dell'elemento di partenza
-	size_t end;		// indice dell'elemento di arrivo
+	size_t start;	// start element index
+	size_t end;		// end element index
 };
 typedef struct Indexes Indexes;
 

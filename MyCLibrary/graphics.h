@@ -99,7 +99,7 @@ extern void Box(const char* s, const int padding);
 
 @param[in] s = String;
 @param[in] padding = Distance from the left side of the shell's window;
-@param[in] reverted = if true the parallelogram pends on right side, if false vice versa.
+@param[in] reverted = If true the parallelogram pends on right side, if false vice versa.
 
 @return void
 */
@@ -109,7 +109,7 @@ extern void Parallelogram(const char* s, const int padding, const bool reverted)
 
 @param[in] s = String;
 @param[in] padding = Distance from the left side of the shell's window;
-@param[in] reverted = if true the top of the triangle points to the ground, if false vice versa.
+@param[in] reverted = If true the top of the triangle points to the ground, if false vice versa.
 
 @return void
 */

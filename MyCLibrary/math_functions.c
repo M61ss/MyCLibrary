@@ -2,44 +2,44 @@
 
 /* FUNZIONI ALGEBRICHE */
 
-int Fattoriale(const int x) {
+int Factorial(const int x) {
 	int result = 1;
 	for (int i = x; i > 1; i--) {
 		result = result * i;
 	}
 	if (x < 0) {
-		MATH_ERROR("%s (fattoriale): line %d: x < 0.\n", __FILE__, __LINE__);
+		MATH_ERROR("%s (Factorial): line %d: x < 0.\n", __FILE__, __LINE__);
 	}
 
 	return result;
 }
 
-double CoefficienteBinomiale(const int n, const int k) {
+double BinomialCoefficient(const int n, const int k) {
 	if (k > n) {
-		MATH_ERROR("%s (coefficientebinomiale): line %d: n > k.\n", __FILE__, __LINE__);
+		MATH_ERROR("%s (BinomialCoefficient): line %d: n > k.\n", __FILE__, __LINE__);
 	}
-	const int x = Fattoriale(n);
-	const int y = Fattoriale(k);
+	const int x = Factorial(n);
+	const int y = Factorial(k);
 	const int differenza = n - k;
-	const int c = Fattoriale(differenza);
+	const int c = Factorial(differenza);
 
 	return (double)x / ((double)y * (double)c);
 }
 
-double BinomialeSimmetrico(const int n, const int h, const int k) {
-	double x = (double)Fattoriale(n);
-	double y = (double)Fattoriale(h);
-	double z = (double)Fattoriale(k);
+double SymmetricBinomial(const int n, const int h, const int k) {
+	double x = (double)Factorial(n);
+	double y = (double)Factorial(h);
+	double z = (double)Factorial(k);
 
 	return x / (y * z);
 }
 
-double ProdottoScalareV(const double* v1, const double* v2, const size_t v1_size, const size_t v2_size) {
+double ScalarProductV(const double* v1, const double* v2, const size_t v1_size, const size_t v2_size) {
 	if (v1 == NULL || v2 == NULL || v1_size == 0 || v2_size == 0) {
-		INVALID_NULL_POINTER("%s (prodottoscalarev): line %d: v is a NULL pointer or v_size <= 0.\n", __FILE__, __LINE__);
+		INVALID_NULL_POINTER("%s (ScalarProductV): line %d: v is a NULL pointer or v_size <= 0.\n", __FILE__, __LINE__);
 	}
 	else if (v1_size != v2_size) {
-		MATH_ERROR("%s (prodottoscalarev): line %d: v1 and v2 have different sizes.\n", __FILE__, __LINE__);
+		MATH_ERROR("%s (ScalarProductV): line %d: v1 and v2 have different sizes.\n", __FILE__, __LINE__);
 	}
 	double result = 0;
 	for (size_t i = 0; i < v1_size; i++) {
@@ -49,9 +49,9 @@ double ProdottoScalareV(const double* v1, const double* v2, const size_t v1_size
 	return result;
 }
 
-void ProdottoScalareS(double* v, const double k, const size_t v_size) {
+void ScalarProductS(double* v, const double k, const size_t v_size) {
 	if (v == NULL || v_size == 0) {
-		INVALID_NULL_POINTER("%s (prodottoscalares): line %d: v is a NULL pointer or v_size <= 0.\n", __FILE__, __LINE__);
+		INVALID_NULL_POINTER("%s (ScalarProductS): line %d: v is a NULL pointer or v_size <= 0.\n", __FILE__, __LINE__);
 	}
 	for (size_t i = 0; i < v_size; i++) {
 		v[i] *= k;

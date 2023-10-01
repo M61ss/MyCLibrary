@@ -1,6 +1,21 @@
 #ifndef MATH_FUNCTIONS_H
 #define MATH_FUNCTIONS_H
 
+#include "macro.h"
+#include <math.h>
+
+#ifndef MACRO_H
+#error math_functions.h: need the header "macro.h"
+#endif // !MACRO_H
+
+
+
+/********************************************************************************/
+/*									DEFINE										*/
+/********************************************************************************/
+
+
+
 #ifndef PI
 /** @brief Macro represents the greek pi */
 #define PI 3.14159265
@@ -11,28 +26,61 @@
 #define E 2.71828182
 #endif // !E
 
-#include "macro.h"
-#include <math.h>
-
-#ifndef MACRO_H
-#error math_functions.h: need the header "macro.h"
-#endif // !MACRO_H
 
 
-// calcola il fattoriale dell'intero x
-extern int Fattoriale(const int x);
+/********************************************************************************/
+/*									FUNCTIONS									*/
+/********************************************************************************/
 
-// calcola il coefficiente binomiale dei due interi n e k
-extern double CoefficienteBinomiale(const int n, const int k);
 
-// calcola il binomiale simmetrico
-extern double BinomialeSimmetrico(const int n, const int h, const int k);
 
-// calcola il prodotto scalare tra due vettori di dimensione v_size
-extern double ProdottoScalareV(const double* v1, const double* v2, const size_t v1_size, const size_t v2_size);
+/** @brief Function `Fattoriale()` calculates the factorial of a positive integer number.
 
-// calcola il prodotto scalare tra uno scalare(k) e un vettore(v) di dimensione v_size (modifica i valori contenuti in v)
-extern void ProdottoScalareS(double* v, const double k, const size_t v_size);
+@param[in] x = 4 bytes integer; it must be >= 0.
+
+@return int = factorial of x.
+*/
+extern int Factorial(const int x);
+
+/** @brief Function `BinomialCoefficient()` calculates the binomial coefficient of two integer numbers.
+
+@param[in] n = 4 bytes integer;
+@param[in] k = 4 bytes integer.
+
+@return double = binomial coefficient of n and k.
+*/
+extern double BinomialCoefficient(const int n, const int k);
+
+/** @brief Function `SymmetricBinomial()` calculates the symmetric binomial of three integer numbers.
+
+@param[in] n = 4 bytes integer;
+@param[in] h = 4 bytes integer.
+@param[in] k = 4 bytes integer.
+
+@return double = symmetric binomial of n, h and k.
+*/
+extern double SymmetricBinomial(const int n, const int h, const int k);
+
+/** @brief Function `ScalarProductV()` calculates the scalar product between two vectors.
+
+@param[in] v1 = first vector;
+@param[in] v2 = second vector;
+@param[in] v1_size = first vector's size;
+@param[in] v2_size = second vector's size.
+
+@return double = result of scalar product between two vectors.
+*/
+extern double ScalarProductV(const double* v1, const double* v2, const size_t v1_size, const size_t v2_size);
+
+/** @brief Function `ScalarProductV()` calculates the scalar product between a vector and a scalar number.
+
+@param[in] v = vector;
+@param[in] k = scalar number;
+@param[in] v_size = vector's size.
+
+@return double = result of scalar product between the vector and the scalar k.
+*/
+extern void ScalarProductS(double* v, const double k, const size_t v_size);
 
 // calcola l'area del triangolo date base e altezza
 extern double AreaTriangolo(const double base, const double altezza);
