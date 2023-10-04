@@ -38,7 +38,7 @@
 
 /** @brief Function `IsEmpty()` verify if a pointer is NULL.
 
-@param[in] p = Pointer.
+@param[in] p = pointer.
 
 @return false if p == NULL, true otherwise.
 */
@@ -46,7 +46,7 @@ extern bool IsEmpty(const void* p);
 
 /** @brief Function `DoublePointerIsEmpty()` verify if a double pointer is NULL.
 
-@param[in] c = Double pointer.
+@param[in] c = double pointer.
 
 @return false if c == NULL, true otherwise.
 */
