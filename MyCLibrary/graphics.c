@@ -31,7 +31,7 @@ void LinePlus(const int lenght) {
 
 void Arrow(const int lenght, const int direction) {
 	if (lenght < 0) {
-		INVALID_PARAMETER("%s (LinePlus): line %d: lenght has to be >= 0.\n", __FILE__, __LINE__);
+		INVALID_PARAMETER("%s (Arrow): line %d: lenght has to be >= 0.\n", __FILE__, __LINE__);
 	}
 	if (direction > 0) {
 		Line(lenght);

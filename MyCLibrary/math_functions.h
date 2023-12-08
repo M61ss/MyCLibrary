@@ -1,6 +1,14 @@
 #ifndef MATH_FUNCTIONS_H
 #define MATH_FUNCTIONS_H
 
+
+
+/********************************************************************************/
+/*									DEFINE										*/
+/********************************************************************************/
+
+
+
 #ifndef PI
 /** @brief Macro represents the greek pi */
 #define PI 3.14159265
@@ -14,9 +22,17 @@
 #include "macro.h"
 #include <math.h>
 
+/* Controls of functions of this header are realized using macros contained in macro.h */
 #ifndef MACRO_H
 #error math_functions.h: need the header "macro.h"
 #endif // !MACRO_H
+
+
+
+/********************************************************************************/
+/*									FUNCTIONS									*/
+/********************************************************************************/
+
 
 
 // calcola il fattoriale dell'intero x

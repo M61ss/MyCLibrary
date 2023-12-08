@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 
 int main(void) {
 	Box("Ehilà!", 0); NEWLINE;
@@ -10,7 +11,7 @@ int main(void) {
 	Arrow(3, 0); NEWLINE;
 	Arrow(0, 1); NEWLINE;
 	Arrow(6, -4); NEWLINE;
-	Arrow(-3, 0); NEWLINE;
+	printf("%s", IntToString(23));
 
 	return EXIT_SUCCESS;
 }
