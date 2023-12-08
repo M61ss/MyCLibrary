@@ -55,7 +55,10 @@ void ZeroFill(TYPE* v, const size_t v_size) {
 	}
 }
 
-void VectorResize(TYPE* v, const size_t index_to_remove, size_t* v_size) {
+void TypeRemove(TYPE* v, const size_t index_to_remove, size_t* v_size) {
+	if (index_to_remove >= *v_size) {
+		INVALID_PARAMETER("%s (TypeRemove): line: %d: index_to_remove has to be < v_size.\n", __FILE__, __LINE__);
+	}
 	for (size_t i = index_to_remove; i < *v_size - 1; i++) {
 		v[i] = v[i + 1];
 	}

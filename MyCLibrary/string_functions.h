@@ -3,21 +3,59 @@
 
 #include "common.h"
 
-// stampa una stringa seguita da un newline
+#ifndef COMMON_H
+#error string_functions.h: need the header "common.h"
+#endif // !COMMON_H
+
+
+/********************************************************************************/
+/*									DEFINE										*/
+/********************************************************************************/
+
+
+
 #ifndef WRITELN
+/** @brief Macro that prints a string and a '\n' */
 #define WRITELN(s) printf("%s\n", s)
 #endif // !WRITELN
 
-// raccoglie una stringa di input generica da stdin (ritorna un vettore dinamico)
+
+
+/********************************************************************************/
+/*									FUNCTIONS									*/
+/********************************************************************************/
+
+
+
+/** @brief Function `UserInput()` read from STDIN any input.
+
+@param[in] input_dim = 4 byte integer that defines the number of character to read.
+
+@return char* = pointer to the first character of the string read (including '\n').
+*/
 extern char* UserInput(const int input_dim);
 
-// raccoglie un input decisionale (y/n)
+/** @brief Function `UserDecision()` read from STDIN a single 'y' or 'n' ('yes' or 'no').
+
+@return bool = if true user has printed yes ('y'), instead false in negative case.
+*/
 extern bool UserDecision(void);
 
-// rimuove tutti i whitespace contenuti nel vettore o array (NON ESEGUE LA REALLOC)
+/** @brief Function `WhitespaceRemove()` removes any whitespace in a string. IT DOES NOT EXECUTE REALLOC OF INPUT ARRAY/VECTOR.
+
+@param[in] s = string.
+
+@return void.
+*/
 extern void WhitespaceRemove(char* s);
 
-// ordina un vettore di stringhe in ordine alfabetico (ogni stringa deve essere allocata dinamicamente)
+/** @brief Function `WhitespaceRemove()` removes any whitespace in a string. EVERY STRING HAS TO BE DINAMICALLY ALLOCATED.
+
+@param[in] s = string double pointer (it is supposed to be a vector of string).
+@param[in] s_size = size of the string vector.
+
+@return void.
+*/
 extern void AlphabeticSort(char** s, const size_t s_size);
 
 // trasforma un int in una stringa (ritorna un vettore dinamico)

@@ -55,7 +55,7 @@ coding many command-line graphics, like boxes, lines, piramids, ect.
 
 /** @brief Function `Space()` prints on STDOUT a sequence of space.
 
-@param[in] n = Number of space to print; it must be >= 0.
+@param[in] n = number of space to print; it must be >= 0.
 
 @return void
 */
@@ -63,7 +63,7 @@ extern void Spacer(const int n);
 
 /** @brief Function `Line()` prints on STDOUT a sequence of dash.
 
-@param[in] lenght = Number of dash to print; it must be >= 0.
+@param[in] lenght = number of dash to print; it must be >= 0.
 
 @return void
 */
@@ -71,7 +71,7 @@ extern void Line(const int lenght);
 
 /** @brief Function `LinePlus()` prints on STDOUT a sequence of dash preceded by `+-` and ended by `-+`.
 
-@param[in] lenght = Number of dash to print; it must be >= 0.
+@param[in] lenght = number of dash to print; it must be >= 0.
 
 @return void
 */
@@ -79,8 +79,8 @@ extern void LinePlus(const int lenght);
 
 /** @brief Function `Arrow()` prints on STDOUT an arrow.
 
-@param[in] lenght = Lenght of the arrow (misured in dash);
-@param[in] direction = If direction > 0 the arrow points to right; if < 0 it points to left; if == 0 it points to both of directions.
+@param[in] lenght = lenght of the arrow (misured in dash);
+@param[in] direction = if direction > 0 the arrow points to right; if < 0 it points to left; if == 0 it points to both of directions.
 
 @return void
 */
@@ -88,8 +88,8 @@ extern void Arrow(const int lenght, const int direction);
 
 /** @brief Function `Box()` prints on STDOUT a box containing a string.
 
-@param[in] s = String;
-@param[in] padding = Distance from the left side of the shell's window.
+@param[in] s = string;
+@param[in] padding = distance from the left side of the shell's window.
 
 @return void
 */
@@ -98,7 +98,7 @@ extern void Box(const char* s, const int padding);
 /** @brief Function `Parallelogram()` prints on STDOUT a parallelogram containing a string.
 
 @param[in] s = String;
-@param[in] padding = Distance from the left side of the shell's window;
+@param[in] padding = distance from the left side of the shell's window;
 @param[in] reverted = if true the parallelogram pends on right side, if false vice versa.
 
 @return void
@@ -107,8 +107,8 @@ extern void Parallelogram(const char* s, const int padding, const bool reverted)
 
 /** @brief Function `Piramid()` prints on STDOUT a triangle containing a string.
 
-@param[in] s = String;
-@param[in] padding = Distance from the left side of the shell's window;
+@param[in] s = string;
+@param[in] padding = distance from the left side of the shell's window;
 @param[in] reverted = if true the top of the triangle points to the ground, if false vice versa.
 
 @return void
