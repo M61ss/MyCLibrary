@@ -1,6 +1,8 @@
 #include "math_functions.h"
 
-/* FUNZIONI ALGEBRICHE */
+// !!! YOU NEED TO INCLUDE TO THE PROJECT macro.h HEADER !!! 
+
+/* ALGEBRAIC FUNCTIONS */
 
 int Factorial(const int x) {
 	int result = 1;
@@ -12,6 +14,10 @@ int Factorial(const int x) {
 	}
 
 	return result;
+}
+
+double Pitagora(const double x, const double y) {
+	return sqrt(pow(x, 2) + pow(y, 2));
 }
 
 double BinomialCoefficient(const int n, const int k) {
@@ -58,7 +64,7 @@ void ScalarProductS(double* v, const double k, const size_t v_size) {
 	}
 }
 
-/* CALCOLO DI AREE */
+/* AREA CALCULATIONS */
 
 double TriangleArea(const double base, const double h) {
 	return (base * h) / (double)2;
@@ -88,7 +94,7 @@ double CircularCrownArea(const double rex, const double rin) {
 	return ((pow(rex, 2) - pow(rin, 2)) * 3.14) / (double)2;
 }
 
-/* CALCOLO DI VOLUMI */
+/* VOLUMES CALCULATIONS */
 
 double RectangleVolume(const double l, const double p, const double h) {
 	return ParallelogramArea(l, p) * h;
@@ -98,6 +104,6 @@ double CubeVolume(const double l) {
 	return pow(l, 3);
 }
 
-double PiramidVolum(const double base, const double hb, const double h) {
+double PiramidVolume(const double base, const double hb, const double h) {
 	return (TriangleArea(base, hb) * h) / 3;
 }
