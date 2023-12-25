@@ -19,6 +19,9 @@ int Factorial(const int x) {
 double Pitagora(const double x, const double y) {
 	return sqrt(pow(x, 2) + pow(y, 2));
 }
+int Pitagora(const int x, const int y) {
+	return sqrt(pow(x, 2) + pow(y, 2));
+}
 
 double BinomialCoefficient(const int n, const int k) {
 	if (k > n) {
@@ -41,7 +44,7 @@ double SymmetricBinomial(const int n, const int h, const int k) {
 }
 
 double ScalarProductV(const double* v1, const double* v2, const size_t v1_size, const size_t v2_size) {
-	if (v1 == NULL || v2 == NULL || v1_size == 0 || v2_size == 0) {
+	if (v1 == nullptr || v2 == nullptr || v1_size == 0 || v2_size == 0) {
 		INVALID_NULL_POINTER("%s (ScalarProductV): line %d: v is a NULL pointer or v_size <= 0.\n", __FILE__, __LINE__);
 	}
 	else if (v1_size != v2_size) {
@@ -56,7 +59,7 @@ double ScalarProductV(const double* v1, const double* v2, const size_t v1_size, 
 }
 
 void ScalarProductS(double* v, const double k, const size_t v_size) {
-	if (v == NULL || v_size == 0) {
+	if (v == nullptr || v_size == 0) {
 		INVALID_NULL_POINTER("%s (ScalarProductS): line %d: v is a NULL pointer or v_size <= 0.\n", __FILE__, __LINE__);
 	}
 	for (size_t i = 0; i < v_size; i++) {
@@ -70,8 +73,8 @@ double TriangleArea(const double base, const double h) {
 	return (base * h) / (double)2;
 }
 
-double SquareArea(const double side) {
-	return pow(side, 2);
+double SquareArea(const double l) {
+	return pow(l, 2);
 }
 
 double ParallelogramArea(const double base, const double h) {

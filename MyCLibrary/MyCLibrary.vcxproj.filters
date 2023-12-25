@@ -44,7 +44,7 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="math_functions.c">
+    <ClCompile Include="math_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="string_functions.c">

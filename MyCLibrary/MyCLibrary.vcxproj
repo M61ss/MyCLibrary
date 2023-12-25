@@ -139,7 +139,7 @@
   <ItemGroup>
     <ClCompile Include="common.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="math_functions.c" />
+    <ClCompile Include="math_functions.cpp" />
     <ClCompile Include="graphics.c" />
     <ClCompile Include="string_functions.c" />
     <ClCompile Include="tools.c" />
