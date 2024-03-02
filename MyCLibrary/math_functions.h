@@ -49,7 +49,7 @@ extern int Factorial(const int x);
 @param[in] y = cathetus 2;
 */
 extern double Pitagora(const double x, const double y);
-extern int Pitagora(const int x, const int y);
+extern double Pitagora(const int x, const int y);
 
 /** @brief Calculates the binomial coefficient giving thw two necessary parameters
 
@@ -66,14 +66,14 @@ extern double BinomialCoefficient(const int n, const int k);
 */
 extern double SymmetricBinomial(const int n, const int h, const int k);
 
-/** @brief Calculates the scalar product between two vectors
+/** @brief Calculates the scalar product between two vectors of the same size
 
 @param[in] v1 = pointer to the first element of the first vector;
 @param[in] v2 = pointer to the first element of the second vector;
-@param[in] v1_size = size of the first vector;
-@param[in] v2_size = size of the second vector;
+@param[in] v_size = size of vectors;
 */
-extern double ScalarProductV(const double* v1, const double* v2, const size_t v1_size, const size_t v2_size);
+extern void ScalarProductV(double* v_dest, const double* v2, const size_t size);
+extern void ScalarProductV(int* v_dest, const int* v2, const size_t size);
 
 /** @brief Calculates the scalar product between a scalar number and a vector
 
@@ -82,6 +82,7 @@ extern double ScalarProductV(const double* v1, const double* v2, const size_t v1
 @param[in] v_size = size of the vector;
 */
 extern void ScalarProductS(double* v, const double k, const size_t v_size);
+extern void ScalarProductS(int* v, const int k, const size_t v_size);
 
 /** @brief Calculates the area of a triangle
 
@@ -89,12 +90,14 @@ extern void ScalarProductS(double* v, const double k, const size_t v_size);
 @param[in] h = height;
 */
 extern double TriangleArea(const double base, const double h);
+extern double TriangleArea(const int base, const int h);
 
 /** @brief Calculates the area of a square
 
 @param[in] l = side;
 */
 extern double SquareArea(const double l);
+extern int SquareArea(const int l);
 
 /** @brief Calculates the area of a parallelogram
 
@@ -102,6 +105,7 @@ extern double SquareArea(const double l);
 @param[in] h = height;
 */
 extern double ParallelogramArea(const double base, const double h);
+extern int ParallelogramArea(const int base, const int h);
 
 /** @brief Calculates the area of a rhombus
 
@@ -109,6 +113,7 @@ extern double ParallelogramArea(const double base, const double h);
 @param[in] d2 = diagonal 2;
 */
 extern double RhombusArea(const double d1, const double d2);
+extern double RhombusArea(const int d1, const int d2);
 
 /** @brief Calculates the area of a trapeze
 
@@ -117,12 +122,14 @@ extern double RhombusArea(const double d1, const double d2);
 @param[in] h = height;
 */
 extern double TrapezeArea(const double b1, const double b2, const double h);
+extern double TrapezeArea(const int b1, const int b2, const int h);
 
 /** @brief Calculates the area of a circle
 
 @param[in] r = radius;
 */
 extern double CircleArea(const double r);
+extern double CircleArea(const int r);
 
 /** @brief Calculates the area of a circle crown
 
@@ -130,6 +137,7 @@ extern double CircleArea(const double r);
 @param[in] rin = internal radius;
 */
 extern double CircularCrownArea(const double rex, const double rin);
+extern double CircularCrownArea(const int rex, const int rin);
 
 /** @brief Calculates a rectangle-shaped volume
 
@@ -138,12 +146,14 @@ extern double CircularCrownArea(const double rex, const double rin);
 @param[in] h = height;
 */
 extern double RectangleVolume(const double l, const double p, const double h);
+extern int RectangleVolume(const int l, const int p, const int h);
 
 /** @brief Calculates a cube
 
 @param[in] l = side;
 */
 extern double CubeVolume(const double l);
+extern int CubeVolume(const int l);
 
 /** @brief Calculates the volume of a piramid
 
@@ -152,5 +162,6 @@ extern double CubeVolume(const double l);
 @param[in] h = height of the piramid;
 */
 extern double PiramidVolume(const double base, const double hb, const double h);
+extern double PiramidVolume(const int base, const int hb, const int h);
 
 #endif // !MATH_FUNCTIONS_H
