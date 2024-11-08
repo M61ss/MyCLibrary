@@ -1,4 +1,5 @@
-#include "main.h"
+#include "string_functions.h"
+#include "graphics.h"
 
 int main(void) {
 	Box("Ehil�!", 0); NEWLINE;
